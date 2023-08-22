@@ -54,7 +54,5 @@ def test_show_details_date_format(create_temp_file, capsys):
     context = {"base_path": str(create_temp_file)}
     show_details(context)
     captured = capsys.readouterr()
-    date__caputerd = captured.out.splitlines()[-1]
-    assert (
-        date__caputerd == "Last modified date: " + f"{datetime.now().date()}"
-    )
+    date_caputerd = captured.out.splitlines()[-1]
+    assert date_caputerd == "Last modified date: " + f"{datetime.now().date()}"
